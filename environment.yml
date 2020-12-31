@@ -1,0 +1,28 @@
+name: SpotifyWatch
+
+channels:
+  - conda-forge
+  - fastai
+  
+dependencies:
+  - python>=3.7
+  - pandas
+  - matplotlib
+  - jupyterlab
+  - lxml
+  - seaborn
+  - twine
+  - mkdocs
+  - mkdocs-material
+  - nbdev
+  - pip
+  
+  - pip:
+      - -e .
+      - ipypb
+      - spotipy
+      - feautils
+      - mkdocs-material-extensions
+      - mkdocstrings
+      - configparser
+      - junix
