@@ -22,6 +22,7 @@ jobs:
         shell: bash
         run: |
           python -m pip install --upgrade pip
+          pip install ipython
           pip install -e .
           dagster pipeline execute -m spotifywatch.pipeline -c pipeline_inputs.yaml
         env:
