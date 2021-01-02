@@ -26,8 +26,8 @@ jobs:
           pip install -e .
           dagster pipeline execute -m spotifywatch.pipeline -c pipeline_inputs.yaml
         env:
-          INSTA_USER: ${{ secrets.SPOTIFY_ID }}
-          INSTA_PSWD: ${{ secrets.SPOTIFY_SECRET }}
+          SPOTIFY_ID: ${{ secrets.SPOTIFY_ID }}
+          SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
       
       - name: Saving changes to repo
         uses: stefanzweifel/git-auto-commit-action@v4
