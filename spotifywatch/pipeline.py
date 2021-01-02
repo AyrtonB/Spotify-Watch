@@ -10,7 +10,6 @@ from spotifywatch import playlists
 from dagster import execute_pipeline, pipeline, solid, Field
 
 import os
-import dotenv
 
 # Cell
 @solid()
