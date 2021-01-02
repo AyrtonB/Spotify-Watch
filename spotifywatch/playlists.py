@@ -21,7 +21,6 @@ import requests
 from .discography import retrieve_track_analysis, initialise_spotify_client
 
 from ipypb import track
-from IPython.display import JSON
 
 # Cell
 def setup_client_scopes():
