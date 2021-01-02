@@ -15,6 +15,9 @@ dependencies:
   - mkdocs
   - mkdocs-material
   - nbdev
+  - python-dotenv
+  - dagster
+  - dagit
   - pip
   
   - pip:

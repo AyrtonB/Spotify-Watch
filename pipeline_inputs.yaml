@@ -1,0 +1,7 @@
+solids:
+  retrieve_latest_discover_weekly:
+    inputs:
+      playlist_id: "spotify:playlist:37i9dQZEVXcOwrS8NC07JJ"
+  update_discover_weekly_archive:
+    inputs:
+      discover_weekly_archive_fp: "data/playlists/discover_weekly.csv"
