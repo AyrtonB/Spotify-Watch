@@ -15,7 +15,6 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
 import os
-import dotenv
 import requests
 
 from .discography import retrieve_track_analysis, initialise_spotify_client

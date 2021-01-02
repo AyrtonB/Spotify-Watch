@@ -19,7 +19,6 @@ import os
 import re
 import json
 import html
-import dotenv
 import requests
 import functools
 
