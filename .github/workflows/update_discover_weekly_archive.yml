@@ -1,0 +1,32 @@
+name: update_discover_weekly_archive
+on:
+  schedule:
+  - cron: "0 12 * * 1"
+  workflow_dispatch: 
+
+jobs:
+  miniconda:
+    name: Miniconda ${{ matrix.os }}
+    runs-on: "ubuntu-latest"
+            
+    steps:
+      - name: Load in repo
+        uses: actions/checkout@v2
+    
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+        
+      - name: Running pipeline
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          dagster pipeline execute -m spotifywatch.pipeline -c pipeline_inputs.yaml
+        env:
+          INSTA_USER: ${{ secrets.SPOTIFY_ID }}
+          INSTA_PSWD: ${{ secrets.SPOTIFY_SECRET }}
+      
+      - name: Saving changes to repo
+        uses: stefanzweifel/git-auto-commit-action@v4
