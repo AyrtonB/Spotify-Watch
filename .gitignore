@@ -1,3 +1,5 @@
+img/album_covers/**
+
 *.bak
 .gitattributes
 .last_checked
